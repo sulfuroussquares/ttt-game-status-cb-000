@@ -23,5 +23,6 @@ def won?(board)
     elsif win.all?{|index_num| board[index_num] == "O"}
       win.inspect
     end
+    puts win
   end
 end
