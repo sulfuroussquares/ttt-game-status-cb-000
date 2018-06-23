@@ -32,11 +32,12 @@ end
 
 def draw?(board)
   WIN_COMBINATIONS.detect do |win|
-    if ((win.none?{|index_num| board[index_num] == "X"}) == true)
-      if ((win.none?{|index_num| board[index_num] == "O"}) == true)
+    if ((win.all?{|index_num| board[index_num] == "X"}) == false)
+      if ((win.all?{|index_num| board[index_num] == "O"}) == false)
         return true
       else
         return false
     end
   end
+end
 end
