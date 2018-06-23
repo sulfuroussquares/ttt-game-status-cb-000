@@ -27,7 +27,5 @@ def won?(board)
 end
 
 def full?(board)
-  board.detect do |space|
-    if (position_taken?(board, {space})) == true
-      return true
+  board.none? {|space| space == " " || space == nil}
 end
