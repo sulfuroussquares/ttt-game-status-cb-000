@@ -27,5 +27,12 @@ def won?(board)
 end
 
 def full?(board)
+  board.detect do |space|
+    if (position_taken?(board, {space})) == true
+      return true
 end
 
+ary = [1,2,3,4,5]
+ary.each do |i|
+   puts i
+end
