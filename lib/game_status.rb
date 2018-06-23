@@ -35,5 +35,7 @@ def draw?(board)
 end
 
 def over?(board)
-  
+  #Game is over if the game is won OR if the game is a draw
+  #Returns False is game is not full and is not won or a draw
+  won?(board) || full?(board) || draw?(board)
 end
