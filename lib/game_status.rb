@@ -31,15 +31,5 @@ def full?(board)
 end
 
 def draw?(board)
-  WIN_COMBINATIONS.detect do |win|
-    if ((win.none?{|index_num| board[index_num] == "X"}) == true)
-      if ((win.none?{|index_num| board[index_num] == "O"}) == false)
-        return true
-      else
-        return false
-      end
-    else 
-      return false
-    end
-  end
+  won?(board).nil? && full?(board).nil?
 end
