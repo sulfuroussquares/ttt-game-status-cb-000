@@ -31,4 +31,11 @@ def full?(board)
 end
 
 def draw?(board)
+  WIN_COMBINATIONS.detect do |win|
+    if win.all?{|index_num| board[index_num] == "X"}
+      win.inspect
+    elsif win.all?{|index_num| board[index_num] == "O"}
+      win.inspect
+    end
+  end
 end
