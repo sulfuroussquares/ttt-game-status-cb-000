@@ -39,3 +39,7 @@ def over?(board)
   #Returns False is game is not full and is not won or a draw
   won?(board) || full?(board) || draw?(board)
 end
+
+def winner?(board)
+  
+end
