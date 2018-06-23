@@ -15,8 +15,13 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
+
 def won?(board)
-  if board[WIN_COMBINATIONS[0]] == "X" && board[WIN_COMBINATIONS[1]] == "X" && board[WIN_COMBINATIONS[2]] == "X"
-  "X won in the top row"
-end
+  WIN_COMBINATIONS.detect do |win|
+    if win.all?{|index_num| board[index_num] == "X"}
+      win.inspect
+    elsif win.all?{|index_num| board[index_num] == "O"}
+      win.inspect
+    end
+  end
 end
