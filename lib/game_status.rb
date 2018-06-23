@@ -34,8 +34,9 @@ def draw?(board)
   WIN_COMBINATIONS.detect do |win|
     if ((win.none?{|index_num| board[index_num] == "X"}) == true)
       if ((win.none?{|index_num| board[index_num] == "O"}) == true)
-        
-      win.inspect
+        return true
+      else
+        return false
     end
   end
 end
